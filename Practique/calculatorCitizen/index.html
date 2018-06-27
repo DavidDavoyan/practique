@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <title>Document</title>
+    <style>
+    * {
+        padding:0px;
+        margin:0px;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #ccccccaf;
+    }
+
+    .row {
+        max-width: 550px;
+        margin:30px auto;
+        background-color: #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 30px #000;
+    } 
+    .row::after {display: table;content:"";clear: both;}
+    .main_container::after {display: table;content:"";clear: both;}
+    .col-1-of-3::after {display: table;content:"";clear: both;}
+    .main_container {
+        padding: 40px;
+        position: relative;
+    }
+    .inputText {
+        width: 100%;
+        height: 70px;
+        margin-bottom: 60px;
+        font-size: 33px;text-align: right;
+        padding: 20px;
+        border-radius: 3px;
+        border:none;font-family:ARIAL;
+        box-shadow: inset  0 0 10px #000;cursor:default;
+    }.btn_calc:last-child {margin:0;}
+    .btn_calc {
+        float: left;
+        display: inline-block;
+        margin-right: 30px;
+        width: calc((100% - 3 * 30px) / 4 );
+        height: 80px;
+        font-size: 30px;
+        cursor: pointer;
+    } .btn_calc {
+        background-color: #fff;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 0 15px #777;transition: all .2s;
+    } 
+    .btn_calc:focus{outline:none;border: none;
+        border-radius: 3px;
+        box-shadow: 0 0 3px #777;}
+    .btn_calc:active {
+        
+    }
+    .btn_calc:hover {
+        box-shadow: 0 0 15px khaki;color: #ccc;
+    }
+    .col-1-of-3 {
+        margin-bottom: 30px;
+    }
+    .brandName {
+        position: absolute;
+        left: 50%;
+        top:140px;
+        transform:translate(-50%,-50%);
+        font-size: 30px;transition: all .2s;
+        backface-visibility: hidden; cursor:default;
+    } .brandName:hover {
+        transform:translate(-50%,-50%) scale(1.1);
+    }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="main_container">
+            <div class="brandName">CITIZEN</div>
+            <div class="1-of-1">
+                <input id="inputText" class="inputText" type="text" readonly>
+            </div>
+            <div class="col-1-of-3">
+                <button id="oneCalc" class="btn_calc">1</button>
+                <button id="twoCalc" class="btn_calc">2</button>
+                <button id="threeCalc" class="btn_calc">3</button>
+                <button id="plus" class="btn_calc">+</button>
+            </div>
+            <div class="col-1-of-3">
+                    <button id="fourCalc" class="btn_calc">4</button>
+                    <button id="fiveCalc" class="btn_calc">5</button>
+                    <button id="sixCalc" class="btn_calc">6</button>
+                    <button id="minus" class="btn_calc">-</button>
+            </div>
+            <div class="col-1-of-3">
+                    <button id="sevenCalc" class="btn_calc">7</button>
+                    <button id="eightCalc" class="btn_calc">8</button>
+                    <button id="nineCalc" class="btn_calc">9</button>
+                    <button id="bazmapatkel" class="btn_calc">X</button>
+            </div>
+            <div class="col-1-of-3">
+                <button id="cleaner" class="btn_calc">C</button>
+                <button id="zeroCalc" class="btn_calc">0</button>
+                <button id="equal" class="btn_calc">=</button>
+                <button id="bajanel" class="btn_calc">/</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
