@@ -1,0 +1,15 @@
+
+body
+{
+    font-family: sans-serif;
+}
+h1 
+{
+    padding-top: 10px;
+}
+#rus, #en 
+{
+    width: 600px;
+    margin: 0px auto;
+    padding-top: 25px;
+}
